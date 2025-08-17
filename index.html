@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <title>Proteja sua Família com Câmeras Intelbras - Avaliação Gratuita</title>
+  <meta name="description" content="Instale câmeras Intelbras e tenha segurança 24h com monitoramento via celular. Avaliação grátis com equipe especializada. Solicite já!" />
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fc;
+      color: #212121;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.5;
+    }
+    header {
+      background: #0d3d1d;
+      color: white;
+      padding: 60px 15px 40px;
+      text-align: center;
+    }
+    .header-content {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: nowrap;
+    }
+    .header-text {
+      flex: 1 1 50%;
+      text-align: left;
+      min-width: 320px;
+      padding-right: 15px;
+    }
+    .header-text h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .header-text p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+      color: #d3d3d3;
+    }
+    .btn-primary {
+      background-color: #25d366;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding: 18px 38px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 6px 12px rgba(37, 211, 102, 0.6);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #1eb954;
+      box-shadow: 0 8px 15px rgba(30, 185, 84, 0.8);
+      outline: none;
+    }
+    .header-image {
+      flex: 1 1 50%;
+      text-align: right;
+      min-width: 320px;
+    }
+    .header-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 15px;
+      color: #212121;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      font-weight: 700;
+      color: #0a2a43;
+      text-align: center;
+    }
+    section p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      max-width: 720px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+      color: #444;
+    }
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+    .benefit {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .benefit:hover,
+    .benefit:focus-within {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .benefit span {
+      font-size: 3rem;
+      margin-bottom: 18px;
+      display: block;
+      color: #25d366;
+    }
+    .benefit h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #0d3d1d;
+      font-weight: 700;
+    }
+    .benefit p {
+      font-size: 1rem;
+      color: #555;
+    }
+    .carousel-container {
+      position: relative;
+      max-width: 800px;
+      margin: 60px auto 80px;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      background: #fff;
+      padding: 30px 20px;
+    }
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .testimonial {
+      min-width: 100%;
+      padding: 15px 25px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .stars {
+      color: #f5b301;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      letter-spacing: 1.5px;
+    }
+    .testimonial p {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .testimonial strong {
+      font-weight: 700;
+      color: #0d3d1d;
+      display: block;
+      font-size: 1rem;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #0d3d1d;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+      user-select: none;
+      font-size: 1.5rem;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .carousel-btn:hover,
+    .carousel-btn:focus {
+      background-color: #25d366;
+      outline: none;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.8);
+    }
+    .prev {
+      left: 12px;
+    }
+    .next {
+      right: 12px;
+    }
+    footer {
+      background: #0d3d1d;
+      color: white;
+      text-align: center;
+      padding: 50px 20px 40px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+    footer h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    footer p {
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      color: #d3d3d3;
+    }
+    footer a {
+      background: #25d366;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 16px 40px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 6px 12px rgba(37, 211, 102, 0.6);
+      display: inline-block;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    footer a:hover,
+    footer a:focus {
+      background-color: #1eb954;
+      box-shadow: 0 8px 18px rgba(30, 185, 84, 0.8);
+      outline: none;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+      }
+      .header-text {
+        flex: 1 1 100%;
+        padding-right: 0;
+        margin-bottom: 25px;
+      }
+      .header-image {
+        flex: 1 1 100%;
+        min-width: auto;
+        text-align: center;
+      }
+      .header-text h1 {
+        font-size: 2rem;
+      }
+      section h2 {
+        font-size: 1.7rem;
+      }
+      .benefits {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content" role="banner" aria-label="Cabeçalho principal da página">
+      <div class="header-text">
+        <h1>Proteja sua família 24h por dia</h1>
+        <p>Câmeras de segurança Intelbras – instalação rápida, garantia total e monitoramento em alta definição direto no seu celular.</p>
+        <a href="https://wa.me/5519996869707" target="_blank" class="btn-primary" rel="noopener noreferrer" aria-label="Solicitar avaliação gratuita no WhatsApp">Solicitar avaliação gratuita</a>
+      </div>
+      <div class="header-image">
+        <img src="inst-cam.png" alt="Câmera de Segurança" loading="lazy" />
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Mais do que câmeras: segurança completa para sua família</h2>
+    <p>Instalar câmeras de segurança não é apenas sobre tecnologia, mas sobre <strong>tranquilidade</strong>. Com nossos projetos personalizados, você terá um sistema moderno, confiável e integrado, capaz de proteger seu lar em tempo real.</p>
+
+    <div class="benefits" role="list" aria-label="Benefícios da segurança Intelbras">
+      <div class="benefit" role="listitem" tabindex="0">
+        <span aria-hidden="true">🏠</span>
+        <h3>Proteção total</h3>
+        <p>Monitore todos os ambientes, áreas externas e entradas da sua casa em alta definição.</p>
+      </div>
+      <div class="benefit" role="listitem" tabindex="0">
+        <span aria-hidden="true">📲</span>
+        <h3>Controle remoto</h3>
+        <p>Acompanhe tudo em tempo real direto no celular, de qualquer lugar do mundo.</p>
+      </div>
+      <div class="benefit" role="listitem" tabindex="0">
+        <span aria-hidden="true">🔒</span>
+        <h3>Instalação profissional</h3>
+        <p>Equipe técnica especializada garantindo um sistema seguro e sem falhas.</p>
+      </div>
+      <div class="benefit" role="listitem" tabindex="0">
+        <span aria-hidden="true">🛡️</span>
+        <h3>Intelbras</h3>
+        <p>Marca líder em segurança eletrônica no Brasil há mais de 45 anos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>O que nossos clientes dizem</h2>
+    <div class="carousel-container" aria-roledescription="carousel" aria-label="Depoimentos de clientes">
+      <div class="carousel" id="carousel" role="list">
+        <div class="testimonial" role="listitem" tabindex="0" aria-live="polite" aria-atomic="true">
+          <div class="stars" aria-label="5 estrelas">★★★★★</div>
+          <p>“Serviço impecável! Instalação rápida e agora acompanho minha casa direto no celular. Recomendo muito.”</p>
+          <strong>- João M.</strong>
+        </div>
+        <div class="testimonial" role="listitem" tabindex="0" aria-live="polite" aria-atomic="true">
+          <div class="stars" aria-label="5 estrelas">★★★★★</div>
+          <p>“Equipe muito profissional, tirou todas as minhas dúvidas e deixou tudo funcionando perfeito.”</p>
+          <strong>- Maria S.</strong>
+        </div>
+        <div class="testimonial" role="listitem" tabindex="0" aria-live="polite" aria-atomic="true">
+          <div class="stars" aria-label="5 estrelas">★★★★★</div>
+          <p>“Me sinto muito mais seguro depois da instalação. Atendimento excelente do início ao fim.”</p>
+          <strong>- Carlos A.</strong>
+        </div>
+      </div>
+      <button class="carousel-btn prev" aria-label="Depoimento anterior" onclick="moveSlide(-1)">‹</button>
+      <button class="carousel-btn next" aria-label="Próximo depoimento" onclick="moveSlide(1)">›</button>
+    </div>
+  </section>
+
+  <footer>
+    <h2>Garanta sua segurança agora mesmo</h2>
+    <p>Entre em contato e solicite um orçamento personalizado para proteger quem você ama.</p>
+    <a href="https://wa.me/5519996869707" target="_blank" rel="noopener noreferrer" aria-label="Falar com especialista via WhatsApp">Falar com especialista</a>
+  </footer>
+
+  <script>
+    let index = 0;
+    const carousel = document.getElementById('carousel');
+    const total = carousel.children.length;
+    let autoSlideInterval;
+
+    function moveSlide(step) {
+      index = (index + step + total) % total;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => moveSlide(1), 6000);
+    }
+
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval);
+    }
+
+    // Start auto slide
+    startAutoSlide();
+
+    const carouselContainer = document.querySelector('.carousel-container');
+    carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+    carouselContainer.addEventListener('mouseleave', startAutoSlide);
+
+    // Accessibility: allow arrow keys for carousel navigation
+    carouselContainer.addEventListener('keydown', e => {
+      if(e.key === 'ArrowLeft') {
+        moveSlide(-1);
+      } else if(e.key === 'ArrowRight') {
+        moveSlide(1);
+      }
+    });
+  </script>
+</body>
+</html>
