@@ -393,14 +393,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Seleciona todos os links que levam ao WhatsApp
-  const whatsappLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]');
+  // Seleciona todos os botões com a classe 'btn-primary'
+  const whatsappButtons = document.querySelectorAll('.btn-primary');
   
-  whatsappLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
-      // Envia o evento para o Pixel da Meta
+  whatsappButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      // Pega o texto do botão clicado
+      const buttonText = button.innerText || button.textContent;
+
+      // Envia o evento 'Contact' para o Pixel da Meta
       fbq('track', 'Contact', {
-        content_name: 'Clique no WhatsApp',
+        content_name: buttonText, // usa o texto do botão
         value: 0.00,
         currency: 'BRL'
       });
