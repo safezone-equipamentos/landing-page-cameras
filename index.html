@@ -390,5 +390,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     carouselContainer.addEventListener('mouseenter', stopAutoSlide);
     carouselContainer.addEventListener('mouseleave', startAutoSlide);
   </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Seleciona todos os links que levam ao WhatsApp
+  const whatsappLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]');
+  
+  whatsappLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      // Envia o evento para o Pixel da Meta
+      fbq('track', 'Contact', {
+        content_name: 'Clique no WhatsApp',
+        value: 0.00,
+        currency: 'BRL'
+      });
+    });
+  });
+});
+</script>
+
 </body>
 </html>
