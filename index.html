@@ -390,27 +390,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     carouselContainer.addEventListener('mouseenter', stopAutoSlide);
     carouselContainer.addEventListener('mouseleave', startAutoSlide);
   </script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Seleciona todos os botões com a classe 'btn-primary'
-  const whatsappButtons = document.querySelectorAll('.btn-primary');
-  
-  whatsappButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-      // Pega o texto do botão clicado
-      const buttonText = button.innerText || button.textContent;
-
-      // Envia o evento 'Contact' para o Pixel da Meta
-      fbq('track', 'Contact', {
-        content_name: buttonText, // usa o texto do botão
-        value: 0.00,
-        currency: 'BRL'
-      });
-    });
-  });
-});
-</script>
-
 </body>
 </html>
